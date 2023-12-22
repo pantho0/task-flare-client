@@ -7,10 +7,10 @@ const navLinks = (
       <NavLink to={'/'}>Home</NavLink>
     </li>
     <li>
-      <NavLink to={'/login'}>Home</NavLink>
+      <NavLink to={'/login'}>Login</NavLink>
     </li>
     <li>
-      <NavLink to={'/signup'}>Home</NavLink>
+      <NavLink to={'/signup'}>Sign Up</NavLink>
     </li>
   </>
 );

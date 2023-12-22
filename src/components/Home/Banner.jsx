@@ -18,7 +18,7 @@ const Banner = () => {
                   className="w-full mt-2 text-white bg-blue-900 hover:bg-blue-800 btn btn-lg"
                   type="submit"
                 >
-                  Get Started
+                  Explore Now
                 </button>
               </div>
               <div className="hidden w-full form-append lg:flex">
@@ -26,7 +26,7 @@ const Banner = () => {
                   className="text-white bg-blue-900 hover:bg-blue-800 btn btn-lg"
                   type="submit"
                 >
-                  Get Started
+                  Explore Now
                 </button>
               </div>
             </form>

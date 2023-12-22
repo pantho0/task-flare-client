@@ -1,6 +1,25 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { authContext } from "../../Providers/AuthProvider";
 
 const SignUp = () => {
+    const {signUp} = useContext(authContext)
+
+    const createUser = (e) =>{
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        // console.log(email, password);
+        signUp(email, password)
+        .then(user=>{
+            console.log(user);
+        })
+        .catch(error=>{
+            console.log(error.message);
+        })
+    }
+
     return (
       <div className="bg-gray-50">
         <div className="px-4 py-20 mx-auto max-w-7xl">
@@ -12,14 +31,16 @@ const SignUp = () => {
             <h1 className="mb-5 text-xl font-light text-left text-gray-800 sm:text-center">
               Sign Up Now
             </h1>
-            <form className="pb-1 space-y-4">
+            <form onSubmit={createUser} className="pb-1 space-y-4">
               <input
-                type="text"
+                type="email"
+                name="email"
                 placeholder="Enter Your Email"
                 className="input input-bordered w-full"
               />
               <input
-                type="text"
+                type="password"
+                name="password"
                 placeholder="Enter Your Password"
                 className="input input-bordered w-full"
               />
